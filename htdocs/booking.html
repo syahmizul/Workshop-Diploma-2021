@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html style="padding: 0px;">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>HotelProject</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="assets/css/Date-Picker-From-and-To.css">
+        <link rel="stylesheet" href="assets/css/Features-Blue.css">
+        <link rel="stylesheet" href="assets/css/Footer-Clean.css">
+        <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+        <link rel="stylesheet" href="assets/css/Header-Blue.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightpick@1.3.4/css/lightpick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+        <link rel="stylesheet" href="assets/css/Login-screen.css">
+        <link rel="stylesheet" href="assets/css/Simple-Slider.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/Team-Boxed.css">
+        <style type="text/css">
+  .spinbox {
+    max-width: 60px;
+    position: relative;
+    padding-right: 20px;
+  }
+  .spinbox .spinbox-input {
+    min-width: 40px;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: center;
+  }
+  .spinbox .spinbox-buttons {
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 20px;
+  }
+    .spinbox .spinbox-buttons .spinbox-up {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 50%;
+      width: 100%;
+      border-left: none;
+      line-height: 1;
+    }
+    .spinbox .spinbox-buttons .spinbox-down {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 50%;
+      width: 100%;
+      border-left: none;
+      line-height: 1;
+    }
+</style>
+        <script>/* Pinegrow Interactions, do not remove */ (function(){try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { window.pgia_small_mq=typeof pgia_small_mq=='string'?pgia_small_mq:'(max-width:767px)';window.pgia_large_mq=typeof pgia_large_mq=='string'?pgia_large_mq:'(min-width:768px)';var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id') && document.documentElement.hasAttribute('data-pg-mobile')) {pgia_small_mq='(min-width:0)';pgia_large_mq='(min-width:99999px)'} pgcss+='@media ' + pgia_small_mq + '{ html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}}';pgcss+='@media ' + pgia_large_mq + '{html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}}';style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}})()</script>
+        <link href="GlobalStyle.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
+    </head>
+    <body style="background-color: #2e4155; font-family: 'Source Sans Pro', sans-serif;">
+        <header>
+            <nav class="navbar navbar-light navbar-expand-md" style="color: rgb(255,255,255);">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.php" style="color: #ffffff;">Hotel</a>
+                    <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-2" style="color: #ffffff; background-color: #3d5c89;">
+                        <span class="sr-only" style="color: #ffffff;">Toggle navigation</span>
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navcol-2" style="color: #ffffff;">
+                        <ul class="navbar-nav" style="color: #ffffff;">
+                            <li class="nav-item" style="color: #ffffff;">
+                                <a class="nav-link active" href="booking.php" style="color: #ffffff;">Room Options</a>
+                            </li>
+                            <li class="nav-item" style="color: #ffffff;">
+                                <a class="nav-link" href="booked.php" style="color: #ffffff;">Booked Rooms</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary" type="button">
+                        <a href="logout.php" style="text-decoration: none; color: #ffffff;">Logout</a>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <div class="d-flex flex-column" style="padding: 40px; color: #ffffff;">
+            <div style="border-radius: 5px; padding: 45px; box-shadow: 0px 10px 20px 8px rgba(0, 49, 107, 0.56); background-color: #2b2b2b; border-top-style: solid; border-left-style: solid; border-right-style: solid; border-bottom-style: solid; border-color: rgba(255, 0, 0, 0);">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+                    <h3>Room Suite</h3>
+                    <button type="button" class="btn btn-primary bookbutton" style="min-width: 165px;">Book!</button>
+                </div>
+                <hr style="background-color: #ffffff;">
+                <div class="box-m box-xl">
+                    <div>
+                        <img src="assets/img/room1.jpg" style="min-width: 309px; max-width: 327px; border-radius: 10px;">
+                    </div>
+                    <div class="room-feature" style="padding: 20px;">
+                        <h4>Room Features</h4>
+                        <hr style="background-color: #ffffff;">
+                        <ul>
+                            <li>test</li>
+                        </ul>
+                    </div>
+                    <div id="booking-date-xl">
+                        <h4>Booking Date</h4>
+                        <hr style="background-color: #ffffff;">
+                        <input type="text" class="form-control datetimes" style="text-align: center;">
+                    </div>
+                    <div class="spinbox" data-min="1" data-max="100" data-step="1">
+                        <input class="form-control spinbox-input" type="text" value="1">
+                        <div class="spinbox-buttons">
+                            <button class="spinbox-up btn btn-default btn-xs" type="button">+</button>
+                            <button class="spinbox-down btn btn-default btn-xs" type="button">-</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/smart-forms.min.js"></script>
+        <script src="assets/js/bs-init.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lightpick@1.3.4/lightpick.min.js"></script>
+        <script src="assets/js/Date-Picker-From-and-To.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+        <script src="assets/js/Simple-Slider.js"></script>
+        <script src="pgia/lib/pgia.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <script>
+            var startDate;
+            var endDate;
+			var roomtype;
+			
+            $(
+                function() 
+				{
+                    $('.datetimes').daterangepicker
+					(
+						{
+							timePicker: true,
+							startDate: moment().startOf('hour'),
+							endDate: moment().startOf('hour').add(32, 'hour'),
+							locale: {
+										format: 'DD/MM hh:mm A'
+									}
+						}
+					);
+                    
+					$(".bookbutton").click
+					(
+						
+						function() 
+							{
+								startDate = $(this).parentsUntil(".d-flex").find(".datetimes").data('daterangepicker').startDate.format('Y-MM-DD HH:mm:ss'); //Ascend until main box div's and find the date picker.
+								endDate = $(this).parentsUntil(".d-flex").find(".datetimes").data('daterangepicker').endDate.format('Y-MM-DD HH:mm:ss'); //Ascend until main box div's and find the date picker.
+								roomtype = $(this).siblings("h3").attr("id"); // Store roomtype in the header.
+								$.ajax({
+										url: "booking.php",
+										type: "POST", 
+										async: true,
+										data: {
+											startDate: startDate,
+											endDate: endDate,
+											roomtype : roomtype
+										}
+									})
+									.done (function(data, textStatus, jqXHR) { 
+										alert("Status : Data successfully inserted into database.");
+									})
+									.fail (function(jqXHR, textStatus, errorThrown) { 
+										
+									})
+									.always (function(jqXHROrData, textStatus, jqXHROrErrorThrown) { 
+										
+									});
+								
+								
+							}
+					);
+					
+                }
+            );
+        </script>
+        <script type="text/javascript">
+      // jQuery must be available before binding events
+      $(document).on('click', '.spinbox-up, .spinbox-down', function() {
+        var $spinbox = $(this).closest('.spinbox');
+        if ($spinbox.length) {
+            var $input = $spinbox.find('input.spinbox-input');
+            if ($input.length) {
+                var max = parseInt($spinbox.data('max')) || false;
+                var min = parseInt($spinbox.data('min')) || false;
+                var val = parseInt($input.val()) || min || 0;
+                var sign = $(this).hasClass('spinbox-up') ? 1 : -1;
+                val += sign * (parseInt($spinbox.data('step')) || 1);
+                if (max && val > max) {
+                    val = max;
+                } else if (min && val < min) {
+                    val = min;
+                }
+                $input.val(val).trigger('change');
+            }
+        }
+    });
+    
+    // Now you may attach events to the spinbox:
+    $('.spinbox-input').on('change', function() {
+       console.log('Spinbox value has been changed!') 
+    });
+</script>
+    </body>
+</html>
